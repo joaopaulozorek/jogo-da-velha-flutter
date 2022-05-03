@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class GameButtonWidget extends StatelessWidget {
   final int id;
   final String text;
   final Color color;
   final Function onPressed;
+
   const GameButtonWidget({
     Key? key,
     required this.id,
-    required this.text,
     required this.color,
     required this.onPressed,
+    required this.text,
   }) : super(key: key);
+
+  set text(String text) {
+    this.text = text;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +29,8 @@ class GameButtonWidget extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Text(
           text,
-          style: TextStyle(
-            color: color,
-            fontSize: 20.0,
+          style: GoogleFonts.pressStart2p(
+            textStyle: TextStyle(fontSize: 80),
           ),
         ),
         onPressed: () => onPressed,

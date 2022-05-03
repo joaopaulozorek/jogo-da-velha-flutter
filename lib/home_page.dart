@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
                 itemBuilder: (context, i) => GameButtonWidget(
                       text: '$i',
                       color: Colors.white,
-                      onPressed: () => {},
+                      onPressed: () => {setState(() {})},
                       id: i,
                     )),
           ),
